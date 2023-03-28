@@ -1,37 +1,27 @@
-//DATA TYPES / PRIMITIVES
+var topics = ['HTML', 'CSS', 'Git', 'JavaScript'];
+var randomTopic = topics[Math.floor(Math.random() * topics.length)];
 
-var string = "string hello there"
-var num = 10 + 20
-var bool = true
-
-var undef = undefined
-
-// DATA STRUCTURES
-//index/indices
-//an index starts at 0
-//          0       1      2   3   4 ..... length is 5
-//ARRAY
-var arr = ["hello", true, 10, [], {}]
-
-//OBJECT
-var obj = {name: "shabnam", cool: true, hobbies : ["hiking", "fishing"]}
-
-//EXPRESSIONS
-
-var expression = 4 >10
-
-console.log(expression)
-
-//IF STATEMENTS
-//if(CONDITION){LOGIC}
-if(expression === true){
-    console.log("ITS TRUE!!!!!!!")
-} else {
-    console.log("IT WAS NOT TRUE!!!! :(")
+function listTopics() {
+ for (var x = 0; x < topics.length; x++) {
+   console.log(topics[x]);
+ }
 }
 
-//+ add
-//- subtract
-//* multiply
-// / divide
-// % remainder (modulus)
+function selectTopic() {
+ if (randomTopic === 'HTML') {
+   console.log("Let's study HTML!");
+ } else if (randomTopic === 'CSS') {
+   console.log("Let's study CSS!");
+ } else if (randomTopic === 'Git') {
+   console.log("Let's study Git!");
+ } else if (randomTopic === 'JavaScript') {
+   console.log("Let's study JavaScript!");
+ } else {
+   console.log('Please try again!');
+ }
+}
+
+console.log('Here are the topics we learned through Prework:');
+listTopics();
+console.log('Which topic should we study first?');
+selectTopic();
